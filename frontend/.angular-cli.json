@@ -15,7 +15,11 @@
       "polyfills": "polyfills.ts",
       "tsconfig": "tsconfig.app.json",
       "prefix": "app",
-      "scripts": []
+      "scripts": [],
+      "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "styles.css"
+      ]
     }
   ],
   "defaults": {
