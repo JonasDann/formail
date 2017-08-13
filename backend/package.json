@@ -1,0 +1,21 @@
+{
+  "name": "formail-backend",
+  "version": "0.0.1",
+  "description": "Form to mail tool backend",
+  "main": "src/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasDann/formail.git"
+  },
+  "author": "Jonas Dann",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/JonasDann/formail/issues"
+  },
+  "homepage": "https://formail.dann.io",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.6"
+  }
+}
