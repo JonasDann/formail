@@ -6,9 +6,9 @@ import {AppComponent} from './app.component';
 import {LandingpageComponent} from "../landingpage/landingpage.component";
 
 const appRoutes: Routes = [
-    { path: '/',          component: LandingpageComponent }
-    // { path: '/dashboard', component: DashboardComponent },
-    // { path: '/form/:id', component: FormComponent },
+    { path: '',          component: LandingpageComponent }
+    // { path: 'dashboard', component: DashboardComponent },
+    // { path: 'form/:id', component: FormComponent },
 ];
 
 @NgModule({
