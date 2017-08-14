@@ -1,0 +1,15 @@
+<navigation></navigation>
+
+<div class="form-wrapper container">
+    <h1><a routerLink="/dashboard"><span class="glyphicon glyphicon-menu-left"></span></a> Form {{form.id}}</h1>
+    <form>
+        <label>Name <input name="name" [(ngModel)]="form.name"></label><br>
+        <label>Description <textarea name="description" [(ngModel)]="form.description"></textarea></label><br>
+        <label>E-Mail <input name="email" [(ngModel)]="form.email"></label><br>
+        <label>Template <textarea name="template" [(ngModel)]="form.template"></textarea></label>
+    </form>
+    <button class="btn btn-default" (click)="save()">Save</button>
+    <a class="btn btn-default" routerLink="/dashboard">Cancel</a>
+</div>
+
+<foooter></foooter>

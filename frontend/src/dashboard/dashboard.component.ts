@@ -35,5 +35,7 @@ export class DashboardComponent implements OnInit {
 export class Form {
     id: string;
     name: string;
+    description: string;
     email: string;
+    template: string;
 }
