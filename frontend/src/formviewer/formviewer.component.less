@@ -1,0 +1,23 @@
+@import "../variables";
+
+.form-wrapper {
+  background-color: @color-background-content;
+
+  form {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: @space-16 @space-32;
+
+    padding-bottom: @space-16;
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  button.btn .glyphicon {
+    display: none;
+
+    .spin;
+  }
+}

@@ -2,7 +2,7 @@
 
 <div class="dashboard-wrapper container">
     <h1><span class="glyphicon glyphicon-th-list"></span> Forms</h1>
-    <a class="add" routerLink="/new"><span class="glyphicon glyphicon-plus"></span></a>
+    <a class="add btn btn-orange" routerLink="/new"><span class="glyphicon glyphicon-plus"></span></a>
     <table class="table">
         <thead>
             <tr>
@@ -17,8 +17,8 @@
                 <td>{{form.name}}</td>
                 <td>{{form.email}}</td>
                 <td>localhost:3000/api/send/{{form.id}}</td>
-                <td class="edit"><a [routerLink]="['/form', form.id]"><span class="glyphicon glyphicon-pencil"></span></a></td>
-                <td class="remove"><button (click)="remove(form.id)"><span class="glyphicon glyphicon-trash"></span></button></td>
+                <td class="edit"><a class="btn btn-small btn-orange" [routerLink]="['/form', form.id]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td class="remove"><button class="btn btn-small btn-orange" (click)="remove(form.id)"><span class="glyphicon glyphicon-trash"></span></button></td>
             </tr>
         </tbody>
     </table>

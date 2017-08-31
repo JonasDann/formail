@@ -34,6 +34,11 @@ export class FormviewerComponent implements OnInit, OnDestroy {
     }
 
     public save() {
-        this.http.post<Form>('http://localhost:3000/api/form', this.form).subscribe(() => {});
+        (<HTMLElement>document.querySelector('button.btn .glyphicon')).style.display = "inline-block";
+
+        this.form.id = this.form.name;
+        this.http.post<Form>('http://localhost:3000/api/form', this.form).subscribe(() => {
+            (<HTMLElement>document.querySelector('button.btn .glyphicon')).style.display = "none";
+        });
     }
 }

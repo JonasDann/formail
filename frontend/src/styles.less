@@ -1,21 +1,39 @@
+@import "variables";
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
 
 body {
     font-family: Quicksand, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: @color-background;
 }
 
 .container.dashboard-wrapper, .container.form-wrapper {
-    margin-top: 50px;
+    margin-top: @space-32;
 
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 
-    padding: 40px;
+    padding: @space-32 @space-64;
 
-    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.75);
+    .box-shadow;
 
     > h1:first-of-type {
         margin-top: 0;
     }
+}
+
+.btn {
+    padding: @space-8 @space-32;
+}
+
+.btn-small {
+    padding: @space-4 @space-8;
+}
+
+.btn-orange {
+    background-color: @color-brand-orange;
+    color: @font-color-light;
+    font-weight: 700;
+    border: none;
 }

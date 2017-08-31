@@ -19,7 +19,6 @@ export class DashboardComponent implements OnInit {
     }
 
     public remove(id) {
-        console.log("test");
         this.http.delete('http://localhost:3000/api/form/' + id).subscribe(() => {
             let i;
             for (i = 0; i < this.forms.length; i++) {

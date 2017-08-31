@@ -1,0 +1,30 @@
+@color-background-dark: rgb(17, 17, 17);
+@color-background: rgb(52, 61, 76);
+@color-background-content: rgb(255, 255, 255);
+@color-brand-orange: rgb(255, 115, 56);
+
+@font-color-light: rgb(255, 255, 255);
+@font-color-orange: @color-brand-orange;
+
+@space-4:  4px;
+@space-8:  8px;
+@space-16: 16px;
+@space-32: 32px;
+@space-64: 64px;
+
+.box-shadow {
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.75);
+}
+
+.spin {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
