@@ -3,6 +3,22 @@
 .form-wrapper {
   background-color: @color-background-content;
 
+  h1 {
+    position: relative;
+
+    a.back {
+      position: absolute;
+      left: -46px;
+      top: 6px;
+      font-size: 28px;
+      color: @font-color-orange;
+
+      &:hover, &:focus {
+        color: @font-color-orange-hover;
+      }
+    }
+  }
+
   form {
     display: grid;
     grid-template-columns: max-content auto;

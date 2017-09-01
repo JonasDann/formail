@@ -18,8 +18,17 @@
             border: none;
         }
 
-        td.edit, td.remove {
-            width: 43px;
+        tbody {
+            tr {
+                td {
+                    border-top: none;
+                    border-bottom: 1px solid @color-line-grey;
+
+                    &.edit, &.remove {
+                        width: 43px;
+                    }
+                }
+            }
         }
     }
 }

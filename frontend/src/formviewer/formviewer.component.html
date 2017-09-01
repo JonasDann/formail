@@ -1,7 +1,7 @@
 <navigation></navigation>
 
 <div class="form-wrapper container">
-    <h1><a routerLink="/dashboard"><span class="glyphicon glyphicon-menu-left"></span></a> Form {{form.id}}</h1>
+    <h1><a class="back" routerLink="/dashboard"><span class="glyphicon glyphicon-arrow-left"></span></a> Form {{form.id}}</h1>
     <form>
         <label class="name" for="form-name">Name</label> <input id="form-name" class="form-control" name="name" [(ngModel)]="form.name">
         <label class="description" for="form-description">Description</label> <textarea id="form-description" class="form-control" name="description" [(ngModel)]="form.description"></textarea>

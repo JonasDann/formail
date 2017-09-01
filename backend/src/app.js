@@ -34,19 +34,33 @@ app.get('/api/form/:id', function (req, res) {
 });
 
 app.post('/api/form', function (req, res) {
-    form.create({
+    var inputForm = {
         id: req.body.id,
         name: req.body.name,
         description: req.body.description,
         email: req.body.email,
         template: req.body.template
-    }, function(err, form) {
+    };
+
+    form.findOneAndUpdate({
+        id: req.body.id
+    }, inputForm, function(err, updatedForm) {
         if (err) {
             res.send(err);
         }
+        
+        if (updatedForm === null) {
+            form.create(inputForm, function(err, form) {
+                if (err) {
+                    res.send(err);
+                }
 
-        res.json(form);
-    })
+                res.json(form);
+            });
+        } else {
+            res.json(updatedForm);
+        }
+    });
 });
 
 app.delete('/api/form/:id', function (req, res) {
