@@ -21,6 +21,18 @@ app.get('/api/form', function (req, res) {
     });
 });
 
+app.get('/api/form/:id', function (req, res) {
+    form.findOne({
+        id: req.params.id
+    }, function(err, form) {
+        if (err) {
+            res.send(err);
+        }
+
+        res.json(form);
+    });
+});
+
 app.post('/api/form', function (req, res) {
     form.create({
         id: req.body.id,
