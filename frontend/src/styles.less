@@ -7,20 +7,8 @@ body {
     background-color: @color-background;
 }
 
-.container.dashboard-wrapper, .container.form-wrapper {
-    margin-top: @space-32;
-
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: @space-32 @space-64;
-
-    .box-shadow;
-
-    > h1:first-of-type {
-        margin-top: 0;
-    }
+.component-wrapper {
+    min-height: ~"calc(100vh - 36px - 50px - 32px)";
 }
 
 .btn {
@@ -45,4 +33,29 @@ body {
 
 h1 {
     margin-bottom: @space-16;
+}
+
+p {
+    margin-bottom: @space-16;
+}
+
+.form-control {
+    padding: @space-8 @space-16;
+}
+
+.form-control:focus {
+    border-color: @color-brand-orange;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @color-brand-orange;
+}
+
+span.brand-for {
+    font-weight: 700;
+}
+span.brand-m {
+    font-weight: 700;
+    color: @font-color-orange-on-dark;
+}
+span.brand-ail {
+    font-weight: 300;
+    color: @font-color-orange-on-dark;
 }

@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 
 @Component({
     selector: 'navigation',
@@ -7,4 +7,12 @@ import {Component} from "@angular/core";
 })
 
 export class NavigationComponent {
+    @Input() loggedIn: boolean;
+
+    public login() {
+        let url = location.href;
+        location.href = "#login";
+        history.replaceState(null,null, url);
+        document.getElementById("account-email").focus();
+    }
 }

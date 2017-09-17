@@ -14,6 +14,8 @@ import {FormsModule} from "@angular/forms";
 const appRoutes: Routes = [
     { path: '',          component: LandingpageComponent },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'profile', component: DashboardComponent }, // TODO
+    { path: 'imprint', component: DashboardComponent }, // TODO
     { path: 'form/:id', component: FormviewerComponent },
     { path: 'new', component: FormviewerComponent }
 ];

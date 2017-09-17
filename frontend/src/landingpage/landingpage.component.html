@@ -1,1 +1,33 @@
-Landingpage
+<navigation [loggedIn]="false"></navigation>
+
+<div class="strip">
+    <h1>We automate <br> form to email <br> workflows.</h1>
+    <h2>You have a static website with a contact form but want to stay anonymous?</h2>
+    <p>
+        Formail will take you to a workflow that sends form data from your website to you without exposing personal
+        contact information. In a few easy steps, form data will be delivered to your email inbox worry-free.
+        No additional code required.
+    </p>
+    <h2>How it works</h2>
+    <ol>
+        <li><span class="number">01</span><span class="text">Create an account and a new form to email workflow.</span></li>
+        <li><span class="number">02</span><span class="text">Write a template email that will be filled with the form data when the form is submitted.</span></li>
+        <li><span class="number">03</span><span class="text">Add the submit link to the form on your website.</span></li>
+    </ol>
+</div>
+<div class="card">
+    <h1 id="login">Create an account</h1>
+    <p>
+        Enter your email address below to sign up. This email will be linked to your newly created account. You will
+        receive a link to your dashboard where you can create new form to email workflows. The link will expire when not
+        used frequently, but you can always request a new link with your email that will lead to your account.
+    </p>
+    <div class="email-login">
+        <form>
+            <label class="email" for="account-email">Account email</label> <input id="account-email" class="form-control" name="email" placeholder="example@example.com" [(ngModel)]="accountEmail">
+        </form>
+        <button class="btn btn-orange" (click)="login()">Send Link</button>
+    </div>
+</div>
+
+<foooter></foooter>

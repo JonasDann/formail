@@ -6,9 +6,11 @@
             </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a routerLink="/">Welcome</a></li>
-            <li><a routerLink="/dashboard">Dashboard</a></li>
-            <li><button class="btn btn-orange">Logout</button></li>
+            <li *ngIf="loggedIn"><a routerLink="/">Welcome</a></li>
+            <li *ngIf="loggedIn"><a routerLink="/dashboard">Dashboard</a></li>
+            <li *ngIf="loggedIn"><a routerLink="/profile">Profile</a></li>
+            <li *ngIf="loggedIn"><button class="btn btn-orange">Logout</button></li>
+            <li *ngIf="!loggedIn"><button (click)="login()" class="btn btn-orange">Login</button></li>
         </ul>
     </div>
 </nav>

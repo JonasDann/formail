@@ -1,18 +1,22 @@
 @color-background-dark: rgb(17, 17, 17);
 @color-background: rgb(52, 61, 76);
 @color-background-content: rgb(255, 255, 255);
-@color-brand-orange: rgb(255, 115, 56);
+@color-brand-orange: rgb(219, 99, 48);
+@color-brand-orange-on-dark: rgb(255, 115, 56);
 @color-line-grey: rgb(205, 205, 205);
 
 @font-color-light: rgb(255, 255, 255);
+@font-color-dark: rgb(17, 17, 17);
 @font-color-orange: @color-brand-orange;
-@font-color-orange-hover: rgb(225, 102, 49);
+@font-color-orange-on-dark: @color-brand-orange-on-dark;
+@font-color-orange-hover: rgb(203, 92, 44);
 
 @space-4:  4px;
 @space-8:  8px;
 @space-16: 16px;
 @space-32: 32px;
 @space-64: 64px;
+@space-128: 128px;
 
 .box-shadow {
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.75);
@@ -20,6 +24,24 @@
 
 .spin {
   animation: spin 2s infinite linear;
+}
+
+.card {
+  background-color: @color-background-content;
+
+  max-width: 900px;
+  margin: @space-32 auto;
+
+  padding: @space-32 @space-64;
+
+  .box-shadow;
+
+  > h1:first-of-type {
+    font-weight: 700;
+    font-size: 40px;
+
+    margin-top: 0;
+  }
 }
 
 @keyframes spin {
