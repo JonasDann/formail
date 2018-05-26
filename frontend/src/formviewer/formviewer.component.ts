@@ -23,7 +23,8 @@ export class FormviewerComponent implements OnInit, OnDestroy {
                 this.form.id = params['id'];
 
                 this.http.get<Form>('http://localhost:3000/api/form/' + this.form.id).subscribe(data => {
-                    this.form = data;
+                    console.log(data);
+                    this.form = new Form(data);
                 });
             }
         });

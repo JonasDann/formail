@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 
-# Stage 0: Build and compile Angular
+# Stage 0: Build Angular App
 FROM node as node
 
 COPY package.json /app/

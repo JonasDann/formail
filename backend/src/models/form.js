@@ -4,8 +4,9 @@ var form = mongoose.model('form', {
     id : String,
     name : String,
     description : String,
-    email : String,
-    template : String
+    emails : [String],
+    template : String,
+    active: Boolean
 });
 
 module.exports = form;

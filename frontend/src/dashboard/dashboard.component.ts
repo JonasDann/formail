@@ -14,8 +14,15 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit(): void {
         this.http.get<Form[]>('http://localhost:3000/api/form').subscribe(data => {
-            this.forms = data;
+            this.forms = [];
+            for (let form of data) {
+                this.forms.push(new Form(form));
+            }
         });
+    }
+
+    public toggleActive(id) {
+
     }
 
     public remove(id) {
@@ -35,6 +42,32 @@ export class Form {
     id: string;
     name: string;
     description: string;
-    email: string;
+    emails: string[];
     template: string;
+    active: boolean;
+
+    constructor(data?: {id: string, name: string, description: string, emails: string[], template: string, active: boolean}) {
+        if (data) {
+            this.id = data.id;
+            this.name = data.name;
+            this.description = data.description;
+            this.emails = data.emails;
+            this.template = data.template;
+            this.active = data.active;
+        } else {
+            this.id = "";
+            this.name = "";
+            this.description = "";
+            this.emails = [];
+            this.template = "";
+            this.active = false;
+        }
+    }
+
+    get emailList(): string {
+        return this.emails.join(", ");
+    }
+    set emailList(str: string) {
+        this.emails = str.split(",").map(element => element.trim());
+    }
 }

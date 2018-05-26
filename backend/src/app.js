@@ -38,8 +38,9 @@ app.post('/api/form', function (req, res) {
         id: req.body.id,
         name: req.body.name,
         description: req.body.description,
-        email: req.body.email,
-        template: req.body.template
+        emails: req.body.emails,
+        template: req.body.template,
+        active: req.body.active
     };
 
     form.findOneAndUpdate({
@@ -73,6 +74,10 @@ app.delete('/api/form/:id', function (req, res) {
 
         res.json(form);
     });
+});
+
+app.get('/api/login/:id', function (req, res) {
+
 });
 
 app.get('/:user_id', function (req, res) {
