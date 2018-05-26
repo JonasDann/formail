@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/formail', {userMongoClient: true});
+mongoose.connect('mongodb://formail-mongo:27017/formail', {userMongoClient: true});
 
 app.use(cors());
 app.use(bodyParser.json());

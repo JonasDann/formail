@@ -1,0 +1,14 @@
+version: '0.0.1'
+services:
+  formail-mongo:
+    image: "mongo"
+  formail-backend:
+    build: backend
+    links:
+     - formail-mongo
+    ports:
+     - "3000:3000"
+  formail-frontend:
+    build: frontend
+    ports:
+     - "80:80"
